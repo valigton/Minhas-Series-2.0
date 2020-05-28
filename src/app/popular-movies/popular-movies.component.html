@@ -1,8 +1,6 @@
 <div class="main-container">
   <h1>Popular</h1>
-  <ul>
-    <li *ngFor="let item of allPopular | async">
-      {{item.id}}
-    </li>
-  </ul>
+    <p *ngFor="let item of popular | asnc">
+        {{ item | json }}
+    </p>
 </div>

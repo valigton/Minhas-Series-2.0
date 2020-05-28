@@ -1,6 +1,6 @@
-import { ApiService } from '../api.service';
 import { Component, OnInit  } from '@angular/core';
 import { Observable } from 'rxjs';
+import { PopularMoviesApiService } from './popular-movies-api.service';
 
 @Component({
   selector: 'app-popular-movies',
@@ -8,14 +8,13 @@ import { Observable } from 'rxjs';
   styleUrls: ['./popular-movies.component.css']
 })
 export class PopularMoviesComponent implements OnInit {
-  constructor( private popularSvc: ApiService) { }
-  allPopular: Observable<any>;
-  
+  constructor(private popularSvc: PopularMoviesApiService) { }
+  popular: Observable<any>;  
   ngOnInit() {
     this.getPopular();
-  }
-  
+  } 
+
   getPopular() {
-    this.allPopular = this.popularSvc.getAllPopular();
+    this.popular = this.popularSvc.getPopular();
   }
 }
