@@ -1,0 +1,27 @@
+mat-toolbar {
+  background: #3f51b5;
+  height: 56px;
+}
+
+a {
+  color: #fff;
+}
+
+.title-toolbar {
+  font-size: 24px;
+  margin-left: 5px;
+}
+.icon-account {
+  padding: 0 25px;
+}
+.spacer {
+  flex: 1 1 auto;
+}
+
+.div-buttons{
+  padding: 0 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+}
