@@ -12,6 +12,6 @@ export class PopularMoviesApiService {
   constructor(private http: HttpClient) { }
 
   getPopular(): Observable<any> {
-    return this.http.get<any>(this.URL_API).pipe(map((data: any) => data.results))
+    return this.http.get<any>(this.URL_API)
   }
 }
